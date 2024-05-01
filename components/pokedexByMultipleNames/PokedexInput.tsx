@@ -12,9 +12,9 @@ const PokedexInput = ({ getInput, input }: PokemonInputProps) => {
   const [submitValue, setSubmitValue] = useState<string | undefined>("");
 
   const getHandler = () => {
-    if(submitValue){
-    getInput(submitValue.split("\n"))
-    setSubmitValue('')
+    if (submitValue) {
+      getInput(submitValue.split("\n"));
+      setSubmitValue("");
     }
   };
 
@@ -41,8 +41,8 @@ const PokedexInput = ({ getInput, input }: PokemonInputProps) => {
         id="outlined-basic"
         label="Enter upto 5 Pokemon Names "
         multiline
-        rows={5} 
-        value={submitValue || ''} // Ensure value is never undefined
+        rows={5}
+        value={submitValue || ""}
         variant="outlined"
         onChange={handleInputChange}
       />

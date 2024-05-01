@@ -19,7 +19,7 @@ const PokedexByType = () => {
   };
 
   return (
-    <section style={{backgroundColor:"#FFE889", padding:"15px"}}>
+    <section style={{ backgroundColor: "#FFE889", padding: "15px" }}>
       <Backdrop
         sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }}
         open={pokemonData?.isLoading}

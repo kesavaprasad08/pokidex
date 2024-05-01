@@ -1,6 +1,6 @@
 const { PrismaClient } = require("@prisma/client");
 
-const prisma = new PrismaClient();
+var prisma = new PrismaClient();
 
 async function main() {
   const pokemonData = [
@@ -63,19 +63,23 @@ async function main() {
       types: ["Normal"],
       sprite:
         "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/143.png",
-    },{
+    },
+    {
       name: "Ivysaur",
       types: ["grass", "poison"],
       sprite: "https://pokemon.com/pictures/ivysaur.png",
-    },{
+    },
+    {
       name: "Venusaur",
       types: ["grass", "poison"],
       sprite: "https://pokemon.com/pictures/venusaur.png",
-    },{
+    },
+    {
       name: "Wartortle",
       types: ["water"],
       sprite: "https://pokemon.com/pictures/wartortle.png",
-    },{
+    },
+    {
       name: "Blastoise",
       types: ["water"],
       sprite: "https://pokemon.com/pictures/blastoise.png",

@@ -12,10 +12,12 @@ const PokedexInput = ({ getInput, input }: PokemonInputProps) => {
   const [submitValue, setSubmitValue] = useState<string | undefined>(input);
 
   const getHandler = () => {
-    if(submitValue){
-    let res =submitValue[0].toUpperCase()+submitValue.toLowerCase().substring(1,submitValue.length);
-    getInput(res);
-    return ;
+    if (submitValue) {
+      let res =
+        submitValue[0].toUpperCase() +
+        submitValue.toLowerCase().substring(1, submitValue.length);
+      getInput(res);
+      return;
     }
     getInput(submitValue);
     setSubmitValue("");
@@ -42,7 +44,7 @@ const PokedexInput = ({ getInput, input }: PokemonInputProps) => {
       <TextField
         id="outlined-basic"
         label="Enter Pokemon Name"
-        value={submitValue || ''} // Ensure value is never undefined
+        value={submitValue || ""}
         variant="outlined"
         onChange={handleInputChange}
       />

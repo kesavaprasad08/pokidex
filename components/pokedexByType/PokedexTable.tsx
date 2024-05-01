@@ -13,7 +13,7 @@ import { UseTRPCQueryResult } from "@trpc/react-query/shared";
 import React, { useState } from "react";
 
 type PokedexTableProps = {
-  pokemonData: UseTRPCQueryResult<Pokemon[], any>;
+  pokemonData: UseTRPCQueryResult<{ id: number; name: string; sprite: string; types: string[]; }[] | undefined,any>;
 };
 
 const PokedexTable = ({ pokemonData }: PokedexTableProps) => {

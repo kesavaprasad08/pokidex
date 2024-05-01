@@ -11,7 +11,7 @@ const AppProvider = ({ children }: { children: ReactNode }) => {
     trpc.createClient({
       links: [
         httpBatchLink({
-          url: `${window.location.origin}/api/trpc`,
+          url: typeof window !== "undefined" ? `${window.location.origin}/api/trpc` : "",
         }),
       ],
     })

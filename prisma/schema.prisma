@@ -10,10 +10,7 @@ generator client {
 
 model Pokemon {
   id        Int      @id @default(autoincrement())
-  name      String   @unique
+  name      String   
   sprite    String
   types     String[]
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
 }

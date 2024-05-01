@@ -1,0 +1,19 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["fullTextSearch", "fullTextIndex"]
+}
+
+model Pokemon {
+  id        Int      @id @default(autoincrement())
+  name      String   @unique
+  sprite    String
+  types     String[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+}

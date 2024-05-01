@@ -3,7 +3,7 @@ import { Pokemon } from "@prisma/client";
 import React from "react";
 
 type PokedexOutputProps = {
-  pokemon: Pokemon;
+  pokemon: { id: number; name: string; sprite: string; types: string[]; } | null | undefined;
 };
 
 const PokedexOutput = ({ pokemon }: PokedexOutputProps) => {

@@ -6,7 +6,6 @@ import { trpc } from "@/utils/trpc";
 import { useState } from "react";
 import PokedexInput from "../pokedexByName/PokedexInput";
 import PokedexOutput from "./PokedexOutput";
-import { Pokemon } from "@prisma/client";
 
 const PokedexByName = () => {
   const [input, getInput] = useState<string | undefined>(undefined);

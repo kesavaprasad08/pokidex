@@ -6,11 +6,13 @@ import { trpc } from "@/utils/trpc";
 import { useState } from "react";
 import PokedexInput from "../pokedexByName/PokedexInput";
 import PokedexOutput from "./PokedexOutput";
+import { Pokemon } from "@prisma/client";
 
 const PokedexByName = () => {
   const [input, getInput] = useState<string | undefined>(undefined);
 
-  const pokemonData = trpc.getPokemon.useQuery(input ? input : "all");
+  const pokemonData  = trpc.getPokemon.useQuery(input ? input : "all");
+  
   return (
     <section style={{ backgroundColor: "#FFE889", padding: "15px" }}>
       <Backdrop

@@ -36,6 +36,7 @@ const PokedexTable = ({ pokemonData }: PokedexTableProps) => {
   const startIndex = page * rowsPerPage;
   const endIndex = startIndex + rowsPerPage;
   const slicedData = pokemonData.data.slice(startIndex, endIndex);
+  console.log(slicedData)
 
   return (
     <TableContainer component={Card} sx={{ maxWidth: "1024px", mx: "auto" }}>

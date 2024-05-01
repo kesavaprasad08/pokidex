@@ -44,7 +44,7 @@ const PokedexInput = ({ getInput, input }: PokemonInputProps) => {
       <TextField
         id="outlined-basic"
         label="Enter Pokemon Name"
-        value={submitValue || ""}
+        value={submitValue || ""} 
         variant="outlined"
         onChange={handleInputChange}
       />
